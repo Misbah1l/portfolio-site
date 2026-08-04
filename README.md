@@ -1,5 +1,31 @@
 # Portfolio Site
 
-This repository contains my personal portfolio website.
+A simple landing page for my personal portfolio, created as part of the **FlyRank Backend AI Engineering Internship**.
 
-Currently, this project includes a simple landing page and will be expanded in future assignments.
+## Live Website
+
+https://misbah1l.github.io/portfolio-site/
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- Git
+- GitHub
+- GitHub Pages
+
+## Features
+
+- Responsive design
+- Modern UI
+- Glassmorphism card
+- Animated gradient background
+- Live deployment using GitHub Pages
+
+## Status
+
+🚀 Portfolio under development. Future updates will include projects, technical skills, certifications, and contact information.
+
+## Author
+
+**Misbah Saeed**
