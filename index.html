@@ -1,76 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Misbah Saeed | Portfolio</title>
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background:#f8fafc;
-      color:#1f2937;
-    }
+<title>Misbah Saeed | Portfolio</title>
 
-    .container{
-      text-align:center;
-      max-width:700px;
-      padding:40px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    h1{
-      font-size:3rem;
-      margin-bottom:15px;
-    }
+<style>
 
-    h2{
-      color:#2563eb;
-      margin-bottom:20px;
-      font-weight:500;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    p{
-      font-size:1.1rem;
-      line-height:1.7;
-      color:#4b5563;
-    }
+body{
 
-    .badge{
-      display:inline-block;
-      margin-top:30px;
-      padding:12px 22px;
-      border-radius:30px;
-      background:#2563eb;
-      color:white;
-      font-weight:bold;
-    }
-  </style>
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+
+background:
+linear-gradient(135deg,#0f172a,#111827,#1e3a8a);
+
+position:relative;
+
+color:white;
+
+}
+
+/* Animated Background */
+
+body::before,
+body::after{
+
+content:"";
+position:absolute;
+width:450px;
+height:450px;
+border-radius:50%;
+filter:blur(90px);
+
+animation:float 12s ease-in-out infinite;
+
+}
+
+body::before{
+
+background:#2563eb;
+top:-120px;
+left:-120px;
+
+}
+
+body::after{
+
+background:#06b6d4;
+bottom:-120px;
+right:-120px;
+
+animation-delay:4s;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(35px);
+
+}
+
+}
+
+.card{
+
+position:relative;
+
+z-index:2;
+
+width:90%;
+max-width:760px;
+
+padding:60px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.45);
+
+}
+
+.logo{
+
+width:90px;
+height:90px;
+
+margin:auto;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:40px;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+margin-bottom:30px;
+
+box-shadow:0 0 40px rgba(37,99,235,.45);
+
+}
+
+h1{
+
+font-size:3.3rem;
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+.role{
+
+font-size:1.3rem;
+
+color:#7dd3fc;
+
+margin-bottom:30px;
+
+}
+
+.description{
+
+font-size:1.08rem;
+
+line-height:1.9;
+
+color:#d1d5db;
+
+}
+
+.button{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:15px 34px;
+
+border-radius:40px;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+font-weight:600;
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 30px rgba(37,99,235,.45);
+
+}
+
+.footer{
+
+margin-top:35px;
+
+font-size:.9rem;
+
+letter-spacing:1px;
+
+color:#cbd5e1;
+
+}
+
+@media(max-width:700px){
+
+.card{
+
+padding:40px 25px;
+
+}
+
+h1{
+
+font-size:2.4rem;
+
+}
+
+.role{
+
+font-size:1.05rem;
+
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-<div class="container">
+<div class="card">
+
+<div class="logo">
+🚀
+</div>
 
 <h1>Misbah Saeed</h1>
 
-<h2>Backend AI Engineer</h2>
+<div class="role">
+Backend AI Engineer
+</div>
 
-<p>
-Welcome to my portfolio website.
-This site is currently under development as part of my
-FlyRank Backend AI Engineering Internship.
-</p>
+<div class="description">
 
-<div class="badge">
-🚀 Portfolio Coming Soon
+Welcome to my personal portfolio.
+
+This website is currently under development as part of my FlyRank Backend AI Engineering Internship.
+
+Soon, it will showcase my backend development projects, AI-powered applications, technical skills, certifications, and learning journey.
+
+</div>
+
+<a href="#" class="button">
+Portfolio Launching Soon
+</a>
+
+<div class="footer">
+
+Built with HTML • Hosted on GitHub Pages
+
 </div>
 
 </div>
