@@ -6,31 +6,31 @@
 
 <title>Misbah Saeed | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
 
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:60px 20px;
+    overflow:auto;
 
-background:
-linear-gradient(135deg,#0f172a,#111827,#1e3a8a);
+    background:linear-gradient(135deg,#0f172a,#111827,#1e3a8a);
 
-position:relative;
+    position:relative;
 
-color:white;
+    color:white;
 
 }
 
@@ -41,28 +41,37 @@ body::after{
 
 content:"";
 position:absolute;
+
 width:450px;
 height:450px;
+
 border-radius:50%;
-filter:blur(90px);
+
+filter:blur(100px);
+
+opacity:.55;
 
 animation:float 12s ease-in-out infinite;
+
+z-index:0;
 
 }
 
 body::before{
 
 background:#2563eb;
-top:-120px;
-left:-120px;
+
+top:-180px;
+left:-180px;
 
 }
 
 body::after{
 
 background:#06b6d4;
-bottom:-120px;
-right:-120px;
+
+bottom:-180px;
+right:-180px;
 
 animation-delay:4s;
 
@@ -71,15 +80,11 @@ animation-delay:4s;
 @keyframes float{
 
 0%,100%{
-
-transform:translateY(0);
-
+transform:translateY(0px);
 }
 
 50%{
-
-transform:translateY(35px);
-
+transform:translateY(40px);
 }
 
 }
@@ -90,55 +95,45 @@ position:relative;
 
 z-index:2;
 
-width:90%;
-max-width:760px;
+width:100%;
+max-width:700px;
 
-padding:60px;
-
-text-align:center;
+padding:45px;
 
 background:rgba(255,255,255,.08);
 
-border:1px solid rgba(255,255,255,.18);
-
 backdrop-filter:blur(18px);
 
-border-radius:28px;
+border:1px solid rgba(255,255,255,.15);
 
-box-shadow:
-0 25px 60px rgba(0,0,0,.45);
+border-radius:24px;
 
-}
+text-align:center;
 
-.logo{
-
-width:90px;
-height:90px;
-
-margin:auto;
-
-border-radius:50%;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-font-size:40px;
-
-background:linear-gradient(135deg,#2563eb,#06b6d4);
-
-margin-bottom:30px;
-
-box-shadow:0 0 40px rgba(37,99,235,.45);
+box-shadow:0 20px 60px rgba(0,0,0,.45);
 
 }
 
 h1{
 
-font-size:3.3rem;
+font-size:3rem;
+
 font-weight:700;
 
 margin-bottom:10px;
+
+}
+
+.line{
+
+width:80px;
+height:4px;
+
+margin:0 auto 20px;
+
+border-radius:10px;
+
+background:linear-gradient(to right,#2563eb,#06b6d4);
 
 }
 
@@ -146,17 +141,19 @@ margin-bottom:10px;
 
 font-size:1.3rem;
 
+font-weight:500;
+
 color:#7dd3fc;
 
-margin-bottom:30px;
+margin-bottom:28px;
 
 }
 
 .description{
 
-font-size:1.08rem;
+font-size:1.05rem;
 
-line-height:1.9;
+line-height:1.8;
 
 color:#d1d5db;
 
@@ -166,21 +163,25 @@ color:#d1d5db;
 
 display:inline-block;
 
-margin-top:40px;
+margin-top:35px;
 
-padding:15px 34px;
+padding:15px 38px;
 
-border-radius:40px;
+border-radius:50px;
 
-background:linear-gradient(135deg,#2563eb,#06b6d4);
+text-decoration:none;
 
 font-weight:600;
 
-text-decoration:none;
+font-size:1rem;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
 
 color:white;
 
 transition:.3s;
+
+box-shadow:0 10px 30px rgba(37,99,235,.35);
 
 }
 
@@ -188,7 +189,7 @@ transition:.3s;
 
 transform:translateY(-4px);
 
-box-shadow:0 12px 30px rgba(37,99,235,.45);
+box-shadow:0 18px 40px rgba(37,99,235,.45);
 
 }
 
@@ -196,31 +197,53 @@ box-shadow:0 12px 30px rgba(37,99,235,.45);
 
 margin-top:35px;
 
-font-size:.9rem;
+padding-top:20px;
 
-letter-spacing:1px;
+border-top:1px solid rgba(255,255,255,.12);
+
+font-size:.9rem;
 
 color:#cbd5e1;
 
+letter-spacing:.5px;
+
 }
 
-@media(max-width:700px){
+@media(max-width:768px){
+
+body{
+
+padding:35px 15px;
+
+}
 
 .card{
 
-padding:40px 25px;
+padding:35px 25px;
 
 }
 
 h1{
 
-font-size:2.4rem;
+font-size:2.3rem;
 
 }
 
 .role{
 
-font-size:1.05rem;
+font-size:1.1rem;
+
+}
+
+.description{
+
+font-size:1rem;
+
+}
+
+.button{
+
+padding:14px 30px;
 
 }
 
@@ -234,11 +257,9 @@ font-size:1.05rem;
 
 <div class="card">
 
-<div class="logo">
-🚀
-</div>
-
 <h1>Misbah Saeed</h1>
+
+<div class="line"></div>
 
 <div class="role">
 Backend AI Engineer
@@ -246,21 +267,27 @@ Backend AI Engineer
 
 <div class="description">
 
-Welcome to my personal portfolio.
+Welcome to my portfolio.
 
-This website is currently under development as part of my FlyRank Backend AI Engineering Internship.
+<br><br>
 
-Soon, it will showcase my backend development projects, AI-powered applications, technical skills, certifications, and learning journey.
+Currently under development as part of the
+<strong>FlyRank Backend AI Engineering Internship</strong>.
+
+<br><br>
+
+Soon, this website will showcase my backend projects,
+technical skills, certifications, and learning journey.
 
 </div>
 
 <a href="#" class="button">
-Portfolio Launching Soon
+🚀 Coming Soon
 </a>
 
 <div class="footer">
 
-Built with HTML • Hosted on GitHub Pages
+HTML • CSS • GitHub Pages
 
 </div>
 
