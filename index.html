@@ -1,297 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Misbah Saeed | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Misbah Saeed | Backend AI Engineer</title>
 
-<style>
+    <link rel="stylesheet" href="style.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-body{
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    padding:60px 20px;
-    overflow:auto;
-
-    background:linear-gradient(135deg,#0f172a,#111827,#1e3a8a);
-
-    position:relative;
-
-    color:white;
-
-}
-
-/* Animated Background */
-
-body::before,
-body::after{
-
-content:"";
-position:absolute;
-
-width:450px;
-height:450px;
-
-border-radius:50%;
-
-filter:blur(100px);
-
-opacity:.55;
-
-animation:float 12s ease-in-out infinite;
-
-z-index:0;
-
-}
-
-body::before{
-
-background:#2563eb;
-
-top:-180px;
-left:-180px;
-
-}
-
-body::after{
-
-background:#06b6d4;
-
-bottom:-180px;
-right:-180px;
-
-animation-delay:4s;
-
-}
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(40px);
-}
-
-}
-
-.card{
-
-position:relative;
-
-z-index:2;
-
-width:100%;
-max-width:700px;
-
-padding:45px;
-
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.15);
-
-border-radius:24px;
-
-text-align:center;
-
-box-shadow:0 20px 60px rgba(0,0,0,.45);
-
-}
-
-h1{
-
-font-size:3rem;
-
-font-weight:700;
-
-margin-bottom:10px;
-
-}
-
-.line{
-
-width:80px;
-height:4px;
-
-margin:0 auto 20px;
-
-border-radius:10px;
-
-background:linear-gradient(to right,#2563eb,#06b6d4);
-
-}
-
-.role{
-
-font-size:1.3rem;
-
-font-weight:500;
-
-color:#7dd3fc;
-
-margin-bottom:28px;
-
-}
-
-.description{
-
-font-size:1.05rem;
-
-line-height:1.8;
-
-color:#d1d5db;
-
-}
-
-.button{
-
-display:inline-block;
-
-margin-top:35px;
-
-padding:15px 38px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-font-size:1rem;
-
-background:linear-gradient(135deg,#2563eb,#06b6d4);
-
-color:white;
-
-transition:.3s;
-
-box-shadow:0 10px 30px rgba(37,99,235,.35);
-
-}
-
-.button:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 18px 40px rgba(37,99,235,.45);
-
-}
-
-.footer{
-
-margin-top:35px;
-
-padding-top:20px;
-
-border-top:1px solid rgba(255,255,255,.12);
-
-font-size:.9rem;
-
-color:#cbd5e1;
-
-letter-spacing:.5px;
-
-}
-
-@media(max-width:768px){
-
-body{
-
-padding:35px 15px;
-
-}
-
-.card{
-
-padding:35px 25px;
-
-}
-
-h1{
-
-font-size:2.3rem;
-
-}
-
-.role{
-
-font-size:1.1rem;
-
-}
-
-.description{
-
-font-size:1rem;
-
-}
-
-.button{
-
-padding:14px 30px;
-
-}
-
-}
-
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="card">
+<header>
 
-<h1>Misbah Saeed</h1>
+    <div class="logo">
+        Misbah Saeed
+    </div>
 
-<div class="line"></div>
+    <nav>
 
-<div class="role">
-Backend AI Engineer
-</div>
+        <a href="index.html">Home</a>
 
-<div class="description">
+        <a href="about.html">About</a>
 
-Welcome to my portfolio.
+        <a href="projects.html">Projects</a>
 
-<br><br>
+        <a href="skills.html">Skills</a>
 
-Currently under development as part of the
-<strong>FlyRank Backend AI Engineering Internship</strong>.
+        <a href="resume.html">Resume</a>
 
-<br><br>
+        <a href="contact.html">Contact</a>
 
-Soon, this website will showcase my backend projects,
-technical skills, certifications, and learning journey.
+    </nav>
 
-</div>
+</header>
 
-<a href="#" class="button">
-🚀 Coming Soon
-</a>
 
-<div class="footer">
 
-HTML • CSS • GitHub Pages
+<section class="hero">
 
-</div>
+    <div class="hero-text">
 
-</div>
+        <h1>Hello, I'm <span>Misbah Saeed</span></h1>
+
+        <h2>Backend AI Engineering Intern | AI Engineering Intern</h2>
+
+        <p>
+
+            Backend AI Engineering Intern at FlyRank and AI Engineering Intern at
+            CodeAlpha, currently pursuing a BS in Computer Science at the Institute
+            of Space Technology (IST). I build backend applications, REST APIs,
+            and AI-powered solutions using Python, FastAPI, Flask, SQL, and MongoDB.
+
+        </p>
+
+        <div class="buttons">
+
+            <a href="projects.html" class="btn">
+                View Projects
+            </a>
+
+            <a href="resume.html" class="btn-outline">
+                View Resume
+            </a>
+
+            <a href="https://github.com/Misbah1l" class="btn" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/misbah-saeed-4272b83a9" class="btn-outline" target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="about-preview">
+
+    <h2>About Me</h2>
+
+    <p>
+
+        I am passionate about Backend Development, Artificial Intelligence,
+        and building scalable software solutions. My experience includes
+        Python, FastAPI, Flask, REST APIs, MongoDB, SQL, Docker,
+        Git, GitHub, and modern backend development practices.
+
+    </p>
+
+    <a href="about.html" class="btn">
+        Learn More
+    </a>
+
+</section>
+
+
+
+<section class="featured-projects">
+
+    <h2>Featured Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="card">
+
+            <h3>FlyRank Task API</h3>
+
+            <p>
+
+                Developed a RESTful Task Management API using FastAPI with CRUD
+                operations, request validation, and interactive Swagger API
+                documentation.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>AI Language Translator</h3>
+
+            <p>
+
+                Built a multilingual translation web application using Python
+                and Flask with translation and text-to-speech functionality.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <h3>Smart FAQ Chatbot</h3>
+
+            <p>
+
+                Developed an AI-powered FAQ chatbot using TF-IDF,
+                Cosine Similarity, Flask, and Natural Language Processing.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="skills-preview">
+
+    <h2>Core Skills</h2>
+
+    <div class="skills">
+
+        <span>Python</span>
+
+        <span>FastAPI</span>
+
+        <span>Flask</span>
+
+        <span>REST APIs</span>
+
+        <span>MongoDB</span>
+
+        <span>MySQL</span>
+
+        <span>SQLite</span>
+
+        <span>Git</span>
+
+        <span>GitHub</span>
+
+        <span>Docker</span>
+
+        <span>Postman</span>
+
+        <span>HTML5</span>
+
+        <span>CSS3</span>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <p>
+
+        © 2026 Misbah Saeed | Backend AI Engineering Portfolio
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
