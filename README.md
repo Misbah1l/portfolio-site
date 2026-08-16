@@ -1,8 +1,8 @@
 # 🌐 Personal Portfolio Website
 
-This repository contains my personal portfolio website, developed as part of the **FlyRank AI Fluency Internship (Week 5 - Ship the Ugly One)** assignment.
+This repository contains my personal portfolio website, built to showcase my background, technical skills, projects, internships, resume, and contact information.
 
-The goal of this project is to publish a live portfolio that showcases my background, technical skills, projects, resume, and contact information.
+The portfolio focuses on my work in **Backend Development, Artificial Intelligence, REST APIs, databases, and computer vision**.
 
 ## 🚀 Live Website
 
@@ -10,15 +10,17 @@ https://misbah1l.github.io/portfolio-site/
 
 ## 📌 Features
 
-- Responsive portfolio website
+- Responsive personal portfolio
 - Professional landing page
 - About Me section
 - Featured projects
-- Technical skills
+- Complete projects showcase
+- Technical skills section
 - Downloadable resume
-- Contact page with GitHub, LinkedIn, and Email
+- Contact page
+- GitHub and LinkedIn links
 - Mobile-friendly layout
-- Hosted using GitHub Pages
+- GitHub Pages deployment
 
 ## 🛠️ Tech Stack
 
@@ -40,27 +42,64 @@ https://misbah1l.github.io/portfolio-site/
 
 ## 💼 Featured Projects
 
-### FlyRank Task API
-A RESTful Task Management API developed using FastAPI with CRUD operations, request validation, and interactive Swagger documentation.
+### LLM Customer Request Triage API
 
-### AI Language Translator
-A multilingual language translation web application built with Python and Flask, supporting translation and text-to-speech functionality.
+An AI-powered backend API built with FastAPI and an OpenRouter-hosted LLM to classify customer requests. It includes background job processing, retry handling, SQLite storage, and job status tracking.
 
-### Smart FAQ Chatbot
-An AI-powered FAQ chatbot developed using Flask, TF-IDF, Cosine Similarity, and Natural Language Processing.
+**Technologies:** Python, FastAPI, OpenRouter, SQLite
+
+### Smart FAQ AI Chatbot
+
+An AI-powered FAQ chatbot built using Flask and NLP techniques. It uses TF-IDF Vectorization and Cosine Similarity to match user questions with relevant answers.
+
+**Technologies:** Python, Flask, NLP, NLTK, Scikit-learn
+
+### Object Detection & Tracking System
+
+A computer vision system using YOLOv8 for object detection and Deep SORT for multi-object tracking. The system provides unique tracking IDs, bounding boxes, class labels, and FPS information.
+
+**Technologies:** Python, YOLOv8, Deep SORT, OpenCV, NumPy
+
+## 📚 Other Projects
+
+### Task API with SQLite
+
+A RESTful CRUD API developed using FastAPI and SQLite with persistent data storage, request validation, and interactive Swagger API documentation.
+
+**Technologies:** Python, FastAPI, SQLite, Pydantic, Uvicorn
+
+### AI Language Translation Tool
+
+A multilingual web application built with Flask and Google Translator services. It supports automatic language detection, translation, language swapping, text download, counters, and text-to-speech.
+
+**Technologies:** Python, Flask, JavaScript, Bootstrap, Deep Translator
 
 ### Online Food Ordering System
-A Flask-based web application with MongoDB integration for customer, menu, and order management.
+
+A web-based food ordering application built with Flask and MongoDB. Customers can register, browse the menu, place and manage orders, while an admin dashboard provides order and sales management.
+
+**Technologies:** Python, Flask, MongoDB, HTML5, CSS3
+
+## 💼 Internship Experience
+
+### Backend AI Engineering Intern — FlyRank
+
+Worked on backend and AI-focused development projects involving Python, FastAPI, REST APIs, LLM integration, background jobs, databases, and software engineering practices.
+
+### AI Engineering Intern — CodeAlpha
+
+Developed AI and machine learning projects including an AI language translation tool, FAQ chatbot, and object detection and tracking system.
 
 ## 📄 Resume
 
-The portfolio includes my latest resume highlighting:
+The portfolio includes my latest resume covering:
 
-- Backend AI Engineering Internship (FlyRank)
-- AI Engineering Internship (CodeAlpha)
+- Internship experience
+- Backend and AI projects
 - Technical skills
 - Academic projects
 - Education
+- Relevant certifications
 
 ## 📬 Contact
 
@@ -68,25 +107,24 @@ The portfolio includes my latest resume highlighting:
 - **GitHub:** https://github.com/Misbah1l
 - **LinkedIn:** https://www.linkedin.com/in/misbah-saeed-4272b83a9
 
-## 📖 Assignment
+## 🎓 Education
 
-**FlyRank Internship**
+**BS Computer Science**  
+Institute of Space Technology (IST)
 
-**Track:** General AI Fluency
+## 📖 Portfolio Context
 
-**Week:** 5
-
-**Assignment:** Ship the Ugly One
+This portfolio was developed during my **FlyRank Internship** as part of my professional development and AI fluency work.
 
 ## 👩‍💻 Author
 
 **Misbah Saeed**
 
-Backend AI Engineering Intern @ FlyRank
+Backend AI Engineering Intern @ FlyRank  
+AI Engineering Intern @ CodeAlpha  
 
-AI Engineering Intern @ CodeAlpha
-
-BS Computer Science Student, Institute of Space Technology (IST)
+BS Computer Science Student  
+Institute of Space Technology (IST)
 
 ---
 
