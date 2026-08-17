@@ -11,6 +11,7 @@ body{
     line-height:1.7;
 }
 
+
 /* ================= HEADER ================= */
 
 header{
@@ -65,7 +66,7 @@ nav a:hover{
 }
 
 .hero h2{
-    color:#06B6D4;
+    color:#0E7490;
     margin-bottom:25px;
     font-size:28px;
     font-weight:600;
@@ -259,6 +260,15 @@ footer{
 }
 
 
+/* ================= ACCESSIBILITY ================= */
+
+a:focus-visible,
+button:focus-visible{
+    outline:3px solid #0E7490;
+    outline-offset:3px;
+}
+
+
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:768px){
@@ -318,3 +328,4 @@ footer{
     }
 
 }
+
