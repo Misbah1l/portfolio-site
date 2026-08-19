@@ -1,76 +1,109 @@
-const chatInput = document.getElementById("chat-input");
-const chatSend = document.getElementById("chat-send");
-const chatMessages = document.getElementById("chat-messages");
+document.addEventListener("DOMContentLoaded", () => {
 
-async function askAI() {
-    const message = chatInput.value.trim();
+    const input = document.getElementById("chat-input");
+    const sendButton = document.getElementById("chat-send");
+    const messages = document.getElementById("chat-messages");
 
-    if (!message) {
+    if (!input || !sendButton || !messages) {
+        console.error("AI chat elements not found.");
         return;
     }
 
-    addMessage(message, "user-message");
+    async function sendMessage() {
 
-    chatInput.value = "";
+        const message = input.value.trim();
 
-    addMessage("Thinking...", "ai-message loading");
-
-    try {
-        const response = await fetch("http://127.0.0.1:8000/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                message: message
-            })
-        });
-
-        const data = await response.json();
-
-        removeLoadingMessage();
-
-        if (!response.ok) {
-            throw new Error(data.detail || "Something went wrong.");
+        if (!message) {
+            return;
         }
 
-        addMessage(data.response, "ai-message");
+        // Show user's message
+        const userMessage = document.createElement("div");
+        userMessage.className = "user-message";
+        userMessage.textContent = message;
 
-    } catch (error) {
-        removeLoadingMessage();
+        messages.appendChild(userMessage);
 
-        addMessage(
-            "Sorry, I couldn't connect to the AI assistant.",
-            "ai-message"
-        );
+        input.value = "";
 
-        console.error(error);
+        // Show loading message
+        const loadingMessage = document.createElement("div");
+        loadingMessage.className = "ai-message loading";
+        loadingMessage.textContent = "Thinking...";
+
+        messages.appendChild(loadingMessage);
+
+        messages.scrollTop = messages.scrollHeight;
+
+        sendButton.disabled = true;
+
+        try {
+
+            const response = await fetch("http://127.0.0.1:8000/chat", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+
+                body: JSON.stringify({
+                    message: message
+                })
+
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server returned ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            loadingMessage.remove();
+
+            const aiMessage = document.createElement("div");
+            aiMessage.className = "ai-message";
+
+            aiMessage.textContent =
+                data.response ||
+                data.message ||
+                data.answer ||
+                "I received a response, but could not display it.";
+
+            messages.appendChild(aiMessage);
+
+        } catch (error) {
+
+            console.error("AI Assistant Error:", error);
+
+            loadingMessage.remove();
+
+            const errorMessage = document.createElement("div");
+            errorMessage.className = "ai-message";
+
+            errorMessage.textContent =
+                "Sorry, I couldn't connect to the AI assistant.";
+
+            messages.appendChild(errorMessage);
+
+        }
+
+        sendButton.disabled = false;
+
+        messages.scrollTop = messages.scrollHeight;
     }
-}
 
-function addMessage(text, className) {
-    const messageElement = document.createElement("div");
 
-    messageElement.className = className;
-    messageElement.textContent = text;
+    sendButton.addEventListener("click", sendMessage);
 
-    chatMessages.appendChild(messageElement);
 
-    chatMessages.scrollTop = chatMessages.scrollHeight;
-}
+    input.addEventListener("keydown", (event) => {
 
-function removeLoadingMessage() {
-    const loadingMessage = chatMessages.querySelector(".loading");
+        if (event.key === "Enter") {
+            sendMessage();
+        }
 
-    if (loadingMessage) {
-        loadingMessage.remove();
-    }
-}
+    });
 
-chatSend.addEventListener("click", askAI);
-
-chatInput.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        askAI();
-    }
 });
