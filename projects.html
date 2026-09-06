@@ -1,241 +1,440 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Misbah Saeed</title>
 
-<title>Projects | Misbah Saeed</title>
+    <meta name="description"
+        content="Projects developed by Misbah Saeed across web development, backend engineering, artificial intelligence, computer vision, and databases.">
 
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 
 <body>
 
 <header>
 
-<div class="logo">Misbah Saeed</div>
+    <a href="index.html" class="logo">
+        Misbah Saeed
+    </a>
 
-<nav>
+    <nav>
 
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="skills.html">Skills</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
 
-</nav>
-
+    </nav>
 
 </header>
 
-<section class="featured-projects">
+
+<main>
+
+    <section class="inner-hero">
+
+        <div class="inner-hero-glow"></div>
+
+        <div class="page-orb orb-a"></div>
+        <div class="page-orb orb-b"></div>
+
+        <div class="inner-hero-content">
+
+            <span class="section-label">
+                SELECTED WORK
+            </span>
+
+            <h1>
+                Projects I've
+                <span>built.</span>
+            </h1>
+
+            <p>
+                Here are some of the projects I have developed across
+                backend development, artificial intelligence, computer
+                vision, and database systems.
+            </p>
+
+        </div>
+
+    </section>
 
 
-<h2>Projects</h2>
+    <section class="projects-page">
 
-<p>
-    Here are some of the projects I have developed across backend development,
-    artificial intelligence, computer vision, and database systems.
-</p>
+        <div class="projects-page-grid">
 
 
-<div class="project-grid">
+            <!-- 01 -->
+
+            <article class="project-card">
+
+                <div class="project-card-top">
+
+                    <span class="project-number">
+                        01
+                    </span>
+
+                    <span class="project-type">
+                        AI / BACKEND
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        LLM Customer Request Triage API
+                    </h2>
+
+                    <p>
+                        Built an AI-powered backend API using FastAPI and
+                        an OpenRouter-hosted LLM to classify customer
+                        requests. The system uses SQLite background jobs,
+                        retry handling, job tracking, and status monitoring.
+                    </p>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>OpenRouter</span>
+                    <span>SQLite</span>
+                    <span>Background Jobs</span>
+                </div>
+
+                <a
+                    href="https://github.com/Misbah1l/flyrank-llm-triage-api"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub Repo ↗
+
+                </a>
+
+            </article>
 
 
-    <!-- LLM Customer Request Triage API -->
+            <!-- 02 -->
 
-    <div class="card">
+            <article class="project-card">
 
-        <h3>LLM Customer Request Triage API</h3>
+                <div class="project-card-top">
 
-        <p>
-            Built an AI-powered backend API using FastAPI and an OpenRouter-hosted
-            LLM to classify customer requests. The system uses SQLite background
-            jobs, retry handling, job tracking, and status monitoring.
-        </p>
+                    <span class="project-number">
+                        02
+                    </span>
 
-        <p>
-            <strong>Tech:</strong> Python, FastAPI, OpenRouter, SQLite, Background Jobs
-        </p>
+                    <span class="project-type">
+                        BACKEND
+                    </span>
 
-        <br>
+                </div>
 
-        <a class="btn"
-           href="https://github.com/Misbah1l/flyrank-llm-triage-api"
-           target="_blank"
-           rel="noopener noreferrer">
-            GitHub Repo
+                <div>
+
+                    <h2>
+                        Task API with SQLite
+                    </h2>
+
+                    <p>
+                        Developed a RESTful CRUD API using FastAPI and
+                        SQLite with persistent task storage, request
+                        validation, automatic database creation, and
+                        interactive Swagger API documentation.
+                    </p>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>SQLite</span>
+                    <span>Pydantic</span>
+                    <span>Uvicorn</span>
+                </div>
+
+                <a
+                    href="https://github.com/Misbah1l/Misbah1l-flyrank-be02-task-api-sqlite"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub Repo ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 03 -->
+
+            <article class="project-card">
+
+                <div class="project-card-top">
+
+                    <span class="project-number">
+                        03
+                    </span>
+
+                    <span class="project-type">
+                        WEB / AI
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        AI Language Translation Tool
+                    </h2>
+
+                    <p>
+                        Built a multilingual translation web application
+                        using Flask and Google Translator services. It
+                        supports automatic language detection, language
+                        swapping, text download, counters, and browser-based
+                        text-to-speech.
+                    </p>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                    <span>Deep Translator</span>
+                </div>
+
+                <a
+                    href="https://github.com/Misbah1l/CodeAlpha_Language_Translation_Tool"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub Repo ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 04 -->
+
+            <article class="project-card">
+
+                <div class="project-card-top">
+
+                    <span class="project-number">
+                        04
+                    </span>
+
+                    <span class="project-type">
+                        NLP / AI
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Smart FAQ AI Chatbot
+                    </h2>
+
+                    <p>
+                        Developed an AI-powered FAQ chatbot using NLP
+                        techniques. TF-IDF Vectorization and Cosine
+                        Similarity are used to match user questions with
+                        a knowledge base and provide relevant answers.
+                    </p>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>NLP</span>
+                    <span>NLTK</span>
+                    <span>Scikit-learn</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a
+                    href="https://github.com/Misbah1l/CodeAlpha_FAQChatbot"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub Repo ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 05 -->
+
+            <article class="project-card">
+
+                <div class="project-card-top">
+
+                    <span class="project-number">
+                        05
+                    </span>
+
+                    <span class="project-type">
+                        WEB / DATABASE
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Online Food Ordering System
+                    </h2>
+
+                    <p>
+                        Created a web-based food ordering application where
+                        customers can register, browse menus, place and
+                        manage orders, while an admin dashboard monitors
+                        orders and food sales.
+                    </p>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>MongoDB</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                </div>
+
+                <a
+                    href="https://github.com/Misbah1l/Online-Food-Ordering-System"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub Repo ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- 06 -->
+
+            <article class="project-card">
+
+                <div class="project-card-top">
+
+                    <span class="project-number">
+                        06
+                    </span>
+
+                    <span class="project-type">
+                        COMPUTER VISION
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>
+                        Object Detection & Tracking System
+                    </h2>
+
+                    <p>
+                        Developed a computer vision system using YOLOv8
+                        for real-time object detection and Deep SORT for
+                        multi-object tracking. Detected objects receive
+                        unique tracking IDs with bounding boxes, class
+                        labels, and FPS information.
+                    </p>
+
+                </div>
+
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>YOLOv8</span>
+                    <span>Deep SORT</span>
+                    <span>OpenCV</span>
+                    <span>NumPy</span>
+                </div>
+
+                <a
+                    href="https://github.com/Misbah1l/CodeAlpha_Object_Detection_Tracking_System"
+                    class="card-link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    GitHub Repo ↗
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section class="page-cta">
+
+        <span class="section-label">
+            MORE TO EXPLORE
+        </span>
+
+        <h2>
+            Interested in what
+            <span>I'm building?</span>
+        </h2>
+
+        <a
+            href="https://github.com/Misbah1l"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Visit My GitHub ↗
+
         </a>
 
-    </div>
+    </section>
 
+</main>
 
-    <!-- Task API with SQLite -->
-
-    <div class="card">
-
-        <h3>Task API with SQLite</h3>
-
-        <p>
-            Developed a RESTful CRUD API using FastAPI and SQLite with persistent
-            task storage, request validation, automatic database creation, and
-            interactive Swagger API documentation.
-        </p>
-
-        <p>
-            <strong>Tech:</strong> Python, FastAPI, SQLite, Pydantic, Uvicorn
-        </p>
-
-        <br>
-
-        <a class="btn"
-           href="https://github.com/Misbah1l/Misbah1l-flyrank-be02-task-api-sqlite"
-           target="_blank"
-           rel="noopener noreferrer">
-            GitHub Repo
-        </a>
-
-    </div>
-
-
-    <!-- AI Language Translation Tool -->
-
-    <div class="card">
-
-        <h3>AI Language Translation Tool</h3>
-
-        <p>
-            Built a multilingual translation web application using Flask and
-            Google Translator services. It supports auto language detection,
-            language swapping, text download, counters, and browser-based
-            text-to-speech.
-        </p>
-
-        <p>
-            <strong>Tech:</strong> Python, Flask, JavaScript, Bootstrap, Deep Translator
-        </p>
-
-        <br>
-
-        <a class="btn"
-           href="https://github.com/Misbah1l/CodeAlpha_Language_Translation_Tool"
-           target="_blank"
-           rel="noopener noreferrer">
-            GitHub Repo
-        </a>
-
-    </div>
-
-
-    <!-- Smart FAQ AI Chatbot -->
-
-    <div class="card">
-
-        <h3>Smart FAQ AI Chatbot</h3>
-
-        <p>
-            Developed an AI-powered FAQ chatbot using NLP techniques.
-            TF-IDF Vectorization and Cosine Similarity are used to match
-            user questions with a knowledge base and provide relevant answers.
-        </p>
-
-        <p>
-            <strong>Tech:</strong> Python, Flask, NLP, NLTK, Scikit-learn, JavaScript
-        </p>
-
-        <br>
-
-        <a class="btn"
-           href="https://github.com/Misbah1l/CodeAlpha_FAQChatbot"
-           target="_blank"
-           rel="noopener noreferrer">
-            GitHub Repo
-        </a>
-
-    </div>
-
-
-    <!-- Online Food Ordering System -->
-
-    <div class="card">
-
-        <h3>Online Food Ordering System</h3>
-
-        <p>
-            Created a web-based food ordering application where customers
-            can register, browse menus, place and manage orders, while an
-            admin dashboard monitors orders and food sales.
-        </p>
-
-        <p>
-            <strong>Tech:</strong> Python, Flask, MongoDB, HTML5, CSS3
-        </p>
-
-        <br>
-
-        <a class="btn"
-           href="https://github.com/Misbah1l/Online-Food-Ordering-System"
-           target="_blank"
-           rel="noopener noreferrer">
-            GitHub Repo
-        </a>
-
-    </div>
-
-
-    <!-- Object Detection & Tracking System -->
-
-    <div class="card">
-
-        <h3>Object Detection & Tracking System</h3>
-
-        <p>
-            Developed a computer vision system using YOLOv8 for real-time
-            object detection and Deep SORT for multi-object tracking.
-            Detected objects receive unique tracking IDs with bounding
-            boxes, class labels, and FPS information.
-        </p>
-
-        <p>
-            <strong>Tech:</strong> Python, YOLOv8, Deep SORT, OpenCV, NumPy
-        </p>
-
-        <br>
-
-        <a class="btn"
-           href="https://github.com/Misbah1l/CodeAlpha_Object_Detection_Tracking_System"
-           target="_blank"
-           rel="noopener noreferrer">
-            GitHub Repo
-        </a>
-
-    </div>
-
-
-</div>
-
-
-</section>
 
 <footer>
 
-
-<p>
-    © 2026 Misbah Saeed | Backend AI Engineering Portfolio
-</p>
-
+    <p>
+        © 2026 Misbah Saeed
+        <span>|</span>
+        Web Developer Portfolio
+    </p>
 
 </footer>
 
-<script src="script.js"></script>
-
 </body>
-
 </html>
