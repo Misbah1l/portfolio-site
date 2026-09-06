@@ -1,62 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const revealElements = document.querySelectorAll(".reveal");
-
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("show");
-
-                    observer.unobserve(entry.target);
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-    revealElements.forEach((element) => {
-        revealObserver.observe(element);
-    });
-
-
-    /* =========================
-       AI CHAT
-    ========================= */
-
     const input = document.getElementById("chat-input");
     const sendButton = document.getElementById("chat-send");
     const messages = document.getElementById("chat-messages");
 
-
     if (!input || !sendButton || !messages) {
+        console.error("AI chat elements not found.");
         return;
     }
 
 
     function formatAIResponse(text) {
 
-        let formatted = String(text)
+        // Escape HTML first for safety
+        let formatted = text
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;");
 
 
+        // Convert Markdown bold
         formatted = formatted.replace(
             /\*\*(.*?)\*\*/g,
             "<strong>$1</strong>"
+        );
+
+
+        // Handle bullet points even when AI puts them on the same line
+        formatted = formatted.replace(
+            /\s+-\s+(?=<strong>)/g,
+            "\n- "
         );
 
 
@@ -66,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let inList = false;
 
 
-        lines.forEach((line) => {
+        lines.forEach(line => {
 
             const trimmed = line.trim();
 
@@ -75,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
+            // Bullet point
             if (trimmed.startsWith("- ")) {
 
                 if (!inList) {
@@ -93,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 html += `<p>${trimmed}</p>`;
             }
-
         });
 
 
@@ -115,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
+        // User message
         const userMessage = document.createElement("div");
 
         userMessage.className = "user-message";
@@ -127,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         input.value = "";
 
 
+        // Loading message
         const loadingMessage = document.createElement("div");
 
         loadingMessage.className = "ai-message loading";
@@ -143,30 +118,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
 
-        
+            const response = await fetch(
+                "http://127.0.0.1:8000/chat",
+                {
+                    method: "POST",
 
-            const API_URL = "YOUR_DEPLOYED_AI_API_URL/chat";
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
 
-
-            if (API_URL.includes("YOUR_DEPLOYED")) {
-                throw new Error("AI backend URL has not been configured.");
-            }
-
-
-            const response = await fetch(API_URL, {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-
-                body: JSON.stringify({
-                    message: message
-                })
-
-            });
+                    body: JSON.stringify({
+                        message: message
+                    })
+                }
+            );
 
 
             if (!response.ok) {
@@ -194,14 +160,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 "I received a response, but could not display it.";
 
 
+            // Render formatted response
             aiMessage.innerHTML = formatAIResponse(answer);
+
 
             messages.appendChild(aiMessage);
 
 
         } catch (error) {
 
-            console.error("AI Assistant Error:", error);
+            console.error(
+                "AI Assistant Error:",
+                error
+            );
 
 
             loadingMessage.remove();
@@ -212,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
             errorMessage.className = "ai-message";
 
             errorMessage.textContent =
-                "The AI assistant is currently unavailable. Please try again later.";
+                "Sorry, I couldn't connect to the AI assistant.";
 
 
             messages.appendChild(errorMessage);
